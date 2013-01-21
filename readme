@@ -1,0 +1,27 @@
+Make a battleship game using object oriented code
+
+Basics of the game
+  each player sets their ships
+  players alternate turns
+  	there is either a hit or a miss each turn
+  	a board that keeps track of the hits and misses will be printed every turn
+  The game continues until one player has all their ships sunk
+
+
+Ship class
+  ships will know their position
+  ships will know their type
+  ships will know where they have been hit
+
+
+Board class
+  board will be a 2 X 2 grid
+  
+
+Player class
+	each player will have a name
+
+
+Main class
+  Will have a go method that runs the program
+  
