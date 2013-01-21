@@ -1,3 +1,8 @@
+Make a battleship game that can be played by two humans.
+Finish a version one that is tested.
+After a working version is created, add more tests and refactor the code.  Try to separate the concerns and eliminate unnecessary dependencies.
+
+
 Make a battleship game using object oriented code
 
 Basics of the game
