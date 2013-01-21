@@ -9,7 +9,7 @@ class Main
 		ships = []
 		game_ships = [["Aircraft carrier", 5]]#, ["Battleship", 4], ["Submarine", 3], ["Destroyer", 3], ["Patrol Boat", 2]]
 		game_ships.each do |ship, size|
-			puts "Where would you like to put your #{this_ship.type} (enter a #{this_ship.size} element array of positions)"
+			puts "Where would you like to put your #{ship} (enter a #{size} element array of positions)"
 			positions = eval(gets.chomp)
 			this_ship = Ship.new(ship, size, positions)
 			ships.push(this_ship)
@@ -17,6 +17,17 @@ class Main
 
 		battleship.place_ships_on_board(board, ships)
 		p board
+
+		5.times do
+			puts "Enter a move"
+			move = eval(gets.chomp)
+			battleship.turn(move, ships, board)
+			battleship.place_ships_on_board(board, ships)
+			p board
+		end
+
+		
+		
 	end
 end
 

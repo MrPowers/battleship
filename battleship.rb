@@ -11,10 +11,23 @@ class Battleship
 
   def place_ships_on_board(board, ships)
     ships.each do |ship|
-      ship.positions.each do |position|
+      ship.positions.each do |position, status|
         y, x = position
-        board.set_cell(y, x, "S")
+        board.set_cell(y, x, status)
       end
     end
   end
+
+  def turn(move, ships, board)
+    ships.each do |ship|
+      if ship.positions.keys.include? move
+        ship.hit(move)
+        return
+      end
+    end
+    y, x = move
+    board.set_cell(y, x, "X")
+  end
+
+  
 end
